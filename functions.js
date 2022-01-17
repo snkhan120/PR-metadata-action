@@ -21,4 +21,8 @@ functions.insertcollection = (collectionName, data) => {
     return mongoose.connection.db.collection(collectionName).insert(data);
 }
 
+functions.deleteCollection = (collectionName) => {
+    return mongoose.connection.db.dropCollection(collectionName);
+}  
+
 module.exports = functions;
